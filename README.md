@@ -337,3 +337,11 @@ git push
 
 
 ### Задание 4. Упрощаем себе жизнь
+
+Открыт проект в PyCharm IDE
+
+![IDE](/img/IDE.png)
+
+Сделаны два коммита через IDE
+
+![IDEcommit2](/img/IDEcommit2.png)
