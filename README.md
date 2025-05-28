@@ -345,3 +345,7 @@ git push
 Сделаны два коммита через IDE
 
 ![IDEcommit2](/img/IDEcommit2.png)
+
+https://github.com/awakehns/devops-netology
+
+https://gitlab.com/awakehns1/devops-netology
