@@ -227,6 +227,8 @@ git remote -v
 
 ![visible](/img/visible.png)
 
+
+
 ### Задание 2. Теги
 
 ```
@@ -277,6 +279,10 @@ git push gitlab v0.1
 
 ![labv0.1](/img/labv0.1.png)
 
+
+
+### Задание 2. Теги
+
 ```
 git log --oneline
 ```
@@ -305,3 +311,29 @@ git push -u origin fix
     To github.com:awakehns/devops-netology.git
     * [new branch]      fix -> fix
     branch 'fix' set up to track 'origin/fix'.
+
+```
+git add README.md
+
+git commit -m "Updated README in fix branch"
+
+git push
+```
+
+    Перечисление объектов: 5, готово.
+    Подсчет объектов: 100% (5/5), готово.
+    При сжатии изменений используется до 8 потоков
+    Сжатие объектов: 100% (3/3), готово.
+    Запись объектов: 100% (3/3), 1.23 КиБ | 1.23 МиБ/с, готово.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To github.com:awakehns/devops-netology.git
+        92459ba..e89a6dd  fix -> fix
+
+Изменения на странице https://github.com/awakehns/devops-netology/network
+
+![graph](/img/graph.png)
+
+
+
+### Задание 4. Упрощаем себе жизнь
