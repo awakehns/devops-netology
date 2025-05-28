@@ -152,3 +152,39 @@ curl -o terraform/.gitignore https://raw.githubusercontent.com/github/gitignore/
 ```
 
 Файл .gitignore исключает из отслеживания Git временные файлы, кэш, директории .terraform, файлы переменных и состояние инфраструктуры.
+
+```
+git add terraform/.gitignore README.md
+
+git commit -m "Added gitignore"
+
+echo "will_be_deleted" > will_be_deleted.txt
+
+echo "will_be_moved" > will_be_moved.txt
+
+git add will_be_deleted.txt will_be_moved.txt
+
+git commit -m "Prepare to delete and move"
+
+git rm will_be_deleted.txt
+
+git mv will_be_moved.txt has_been_moved.txt
+
+git commit -m "Moved and deleted"
+
+git log --oneline
+```
+
+    acffc6a (HEAD -> main) Moved and deleted
+    663b874 Prepare to delete and move
+    242d658 Added gitignore
+    0d6c3f2 First commit
+    eb81a32 (origin/main, origin/HEAD) Initial commit
+
+```
+git add README.md
+
+git push
+```
+
+https://github.com/awakehns/devops-netology
