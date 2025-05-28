@@ -188,3 +188,120 @@ git push
 ```
 
 https://github.com/awakehns/devops-netology
+
+
+
+# Домашнее задание к занятию "`Основы Git`" - `Демин Герман`
+
+### Задание 1. Знакомимся с GitLab и Bitbucket
+
+Создан репозиторий gitlab
+
+![createlab](/img/createlab.png)
+
+Добавлен ssh ключ gitlab
+
+![ssh](/img/ssh.png)
+
+```
+git remote -v
+```
+
+    origin  git@github.com:awakehns/devops-netology.git (fetch)
+    origin  git@github.com:awakehns/devops-netology.git (push)
+
+```
+git remote add gitlab git@gitlab.com:awakehns/devops-netology.git
+
+git push -u gitlab main
+
+git remote -v
+```
+
+    gitlab  git@gitlab.com:awakehns1/devops-netology.git (fetch)
+    gitlab  git@gitlab.com:awakehns1/devops-netology.git (push)
+    origin  git@github.com:awakehns/devops-netology.git (fetch)
+    origin  git@github.com:awakehns/devops-netology.git (push)
+
+Изменена видимость проекта на "Public"
+
+![visible](/img/visible.png)
+
+### Задание 2. Теги
+
+```
+git tag v0.0
+
+git push origin v0.0
+
+git push gitlab v0.0
+```
+
+    Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+    To github.com:awakehns/devops-netology.git
+    * [new tag]         v0.0 -> v0.0
+    
+    Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+    To gitlab.com:awakehns1/devops-netology.git
+    * [new tag]         v0.0 -> v0.0
+
+Запушен легковесный тег v0.0
+
+![hubv0.0](/img/hubv0.0.png)
+
+![labv0.0](/img/labv0.0.png)
+    
+```
+git tag -a v0.1 -m "Version 0.1"
+git push origin v0.1
+git push gitlab v0.1
+```
+
+    Перечисление объектов: 1, готово.
+    Подсчет объектов: 100% (1/1), готово.
+    Запись объектов: 100% (1/1), 160 байтов | 160.00 КиБ/с, готово.
+    Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+    To github.com:awakehns/devops-netology.git
+    * [new tag]         v0.1 -> v0.1
+
+    Перечисление объектов: 1, готово.
+    Подсчет объектов: 100% (1/1), готово.
+    Запись объектов: 100% (1/1), 160 байтов | 160.00 КиБ/с, готово.
+    Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+    To gitlab.com:awakehns1/devops-netology.git
+    * [new tag]         v0.1 -> v0.1
+
+Запушен легковесный тег v0.1
+
+![hubv0.1](/img/hubv0.1.png)
+
+![labv0.1](/img/labv0.1.png)
+
+```
+git log --oneline
+```
+
+    92459ba (HEAD -> main, tag: v0.1, tag: v0.0, origin/main, origin/HEAD, gitlab/main) .
+    db71280 .
+    acffc6a Moved and deleted
+    663b874 Prepare to delete and move
+    242d658 Added gitignore
+    0d6c3f2 First commit
+    eb81a32 Initial commit
+
+```
+git checkout 92459ba
+
+git switch -c fix
+
+git push -u origin fix
+```
+
+    Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+    remote: 
+    remote: Create a pull request for 'fix' on GitHub by visiting:
+    remote:      https://github.com/awakehns/devops-netology/pull/new/fix
+    remote: 
+    To github.com:awakehns/devops-netology.git
+    * [new branch]      fix -> fix
+    branch 'fix' set up to track 'origin/fix'.
