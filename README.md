@@ -153,26 +153,47 @@ curl -o terraform/.gitignore https://raw.githubusercontent.com/github/gitignore/
 
 Файл `.gitignore` в этом проекте настроен на исключение из Git следующих типов файлов и папок:
 
-- Локальные каталоги Terraform
-  Исключается `.terraform/` — это служебная директория, создаваемая при инициализации Terraform (`terraform init`).
+- .terraform/
+Игнорирует директорию .terraform/
 
-- Файлы состояния инфраструктуры
-  `*.tfstate`, `*.tfstate.*` — содержат текущее состояние управляемой инфраструктуры, включая конфиденциальные данные. Не должны попадать в репозиторий.
+- *.tfstate
+Игнорирует файлы с расширением .tfstate
 
-- Файлы аварийных логов
-  `crash.log`, `crash.*.log` — создаются при сбоях Terraform. Хранят отладочную информацию.
+- *.tfstate.*
+Игнорирует любые производные файлы, начинающиеся на .tfstate.
 
-- Файлы переменных с секретами
-  `*.tfvars`, `*.tfvars.json` — часто содержат пароли, ключи и другие секреты, специфичные для среды. Исключаются из соображений безопасности.
+- crash.log
+Игнорирует файл crash.log
 
-- Файлы переопределений ресурсов
-  `override.tf`, `*_override.tf`, и их `.json`-версии — используются локально для замены конфигурации и не должны попадать в VCS.
+- crash.*.log
+Игнорирует все файлы, имя которых начинается с crash. и заканчивается на .log
 
-- Файл блокировки состояния
-  `.terraform.tfstate.lock.info` — временный файл, используемый для блокировки состояния при выполнении команд.
+- *.tfvars
+Игнорирует файлы с расширением .tfvars
 
-- Файлы конфигурации CLI
-  `.terraformrc`, `terraform.rc` — пользовательские настройки CLI Terraform, специфичные для машины.
+- *.tfvars.json
+Игнорирует файлы, заканчивающиеся на tfvars.json
+
+- override.tf
+Игнорирует файл override.tf
+
+- override.tf.json
+Игнорирует файл override.tf.json
+
+- *_override.tf
+Игнорирует любые файлы, заканчивающиеся на _override.tf
+
+- *_override.tf.json
+Игнорирует любые файлы, заканчивающиеся на _override.tf.json
+
+- .terraform.tfstate.lock.info
+Игнорирует файл ~/.terraform.tfstate.lock.info
+
+- .terraformrc
+Игнорирует файл настроек ~/.terraformrc
+
+- terraform.rc
+Игнорирует файл terraform.rc
 
 ```
 git add terraform/.gitignore README.md
