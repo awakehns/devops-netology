@@ -187,10 +187,10 @@ curl -o terraform/.gitignore https://raw.githubusercontent.com/github/gitignore/
 Игнорирует любые файлы, заканчивающиеся на _override.tf.json
 
 - .terraform.tfstate.lock.info
-Игнорирует файл ~/.terraform.tfstate.lock.info
+Игнорирует файл .terraform.tfstate.lock.info
 
 - .terraformrc
-Игнорирует файл настроек ~/.terraformrc
+Игнорирует файл настроек .terraformrc
 
 - terraform.rc
 Игнорирует файл terraform.rc
